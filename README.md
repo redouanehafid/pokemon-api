@@ -1,24 +1,55 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This api allows you to discover the list of all the pokemons and perform CRUD operations.
+### Ruby version
+ 
+  Install rvm => [https://rvm.io/rvm/install](https://rvm.io/rvm/install)
 
-Things you may want to cover:
+  ```bash
+    $ rvm install 3.1.1
+  ```
 
-* Ruby version
+  Check if your ruby local is 3.1.1
 
-* System dependencies
+  ```bash
+    $ ruby -v
+  ```
+  
+  If your ruby version is diffrent than 3.1.1 run
 
-* Configuration
+  ```bash
+    $ rvm use 3.1.1
+  ```
 
-* Database creation
+### System dependencies
+   Install rails
 
-* Database initialization
+  ```bash
+    $ gem install rails
+    $ gem install bundler
+  ```
 
-* How to run the test suite
+### Configuration
+  Install postgresql
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```bash
+    $ brew install postgresql
+  ```
 
-* Deployment instructions
+  Database creation
 
-* ...
+  ```bash
+    $ bundle exec rails db:create
+    $ bundle exec rails db:migrate
+  ```
+
+### Database initialization
+  ```bash
+    $ bundle exec rails db:seed
+  ```
+### run the test suite
+  ```bash
+    $ bundle exec rspec
+  ```
+
+
