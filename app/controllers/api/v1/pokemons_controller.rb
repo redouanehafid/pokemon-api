@@ -33,7 +33,7 @@ module Api
         if Pokemon.exists?(params[:id])
           pokemon = Pokemon.find(params[:id])
           if pokemon.update(pokemon_params)
-            render json: {status: 'SUCCESS', message: 'Updated pokemon', data:pokemon}, status: :updated
+            render json: {status: 'SUCCESS', message: 'Updated pokemon', data:pokemon}, status: :ok
           else
             render json: {status: 'ERROR', message: 'Pokemon not updated', data:pokemon.errors}, status: :unprocessable_entity
           end
