@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   
 
+  namespace :api do
+    namespace :v1 do
+      resources :pokemons, only: [:index, :create, :show, :update, :destroy]
+    end
+  end
 
   
 end
